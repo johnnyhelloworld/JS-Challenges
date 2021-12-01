@@ -26,37 +26,37 @@ const person4 = {
 }
 
 // 2.
-let imcBernard = Math.round(person1.weight / (person1.height * person1.height) * 10)/10;
+let imcBernard = person1.weight / (person1.height * person1.height);
 console.log(imcBernard);
 
-let imcMarcel = Math.round(person2.weight / (person2.height * person2.height) * 10)/10;
+let imcMarcel = person2.weight / (person2.height * person2.height);
 console.log(imcMarcel);
 
-let imcBernard2 = Math.round(person3.weight / (person3.height * person3.height) * 10)/10;
+let imcBernard2 = person3.weight / (person3.height * person3.height);
 console.log(imcBernard2);
 
-let imcMarcel2 = Math.round(person4.weight / (person4.height * person4.height) * 10)/10;
+let imcMarcel2 = person4.weight / (person4.height * person4.height);
 console.log(imcMarcel2);
 
 // 3.
-let bernardHigherIMC = false;
+let bernardHigherIMC = imcBernard > imcMarcel;
 
 if (imcBernard > imcMarcel){
   bernardHigherIMC = true;
-  console.log(`Bernard a un IMC ${imcBernard} plus élevé que Marcel ${imcMarcel}`);
+  console.log(`Bernard a un IMC (${imcBernard}) plus élevé que Marcel (${imcMarcel})`);
 }
 else {
   bernardHigherIMC = false;
-  console.log(`Marcel a un IMC ${imcMarcel} plus élevé que Bernard ${imcBernard}`);
+  console.log(`Marcel a un IMC (${imcMarcel}) plus élevé que Bernard (${imcBernard})`);
 }
 
 if (imcBernard2 > imcMarcel2){
   bernardHigherIMC = true;
-  console.log(`Bernard a un IMC ${imcBernard2} plus élevé que Marcel ${imcMarcel2}`);
+  console.log(`Bernard a un IMC (${imcBernard2}) plus élevé que Marcel (${imcMarcel2})`);
 }
 else {
   bernardHigherIMC = false;
-  console.log(`Marcel a un IMC ${imcMarcel2} plus élevé que Bernard ${imcBernard2}`);
+  console.log(`Marcel a un IMC (${imcMarcel2}) plus élevé que Bernard (${imcBernard2})`);
 }
 
 let people = [person1, person2, person3, person4];
